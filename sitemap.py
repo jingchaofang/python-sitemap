@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
 # python生成sitemap，超过5万条数据自动生成新文件。
-# from __future__ import division
-# date:2016-3-18
-
-# Author:赵彦刚@zhaoyangang.cn
 
 import os, datetime
 
