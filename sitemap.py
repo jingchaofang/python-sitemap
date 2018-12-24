@@ -61,7 +61,7 @@ f.write('<urlset>\n')
 f1 = open('%s/watch_sitemapindex.xml'%(path), 'a')
 f1.write('<?xml version="1.0" encoding="utf-8"?>\n')
 f1.write('<sitemapindex>\n')
-f1.write("  <sitemap>\n    <loc>%s%s%s</loc>\n    <lastmod>%s</lastmod>\n  </sitemap>\n"%(host, path, 'sitemap_1.xml', lastmod))
+f1.write("  <sitemap>\n    <loc>%s%s%s</loc>\n    <lastmod>%s</lastmod>\n  </sitemap>\n"%(host, path, 'watch_sitemap_1.xml', lastmod))
 
 for url in open("urls.txt"):
     url = url.strip()
