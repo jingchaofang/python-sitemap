@@ -3,9 +3,16 @@
 # 脚本运行
 
 urls.txt文件每行一个网址
+目前最多能处理50000*50000 = 2500000000条，如需更多需升级脚本
+TODO:边界测试
 
 ```
 python3 sitemap.py
+```
+
+```
+打包压缩 tar -zcvf static.tar.gz static
+解压 tar -zxvf static.tar.gz
 ```
 
 # 什么是Sitemap？

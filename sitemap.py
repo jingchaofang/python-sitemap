@@ -66,13 +66,20 @@ f1.write("  <sitemap>\n    <loc>%s%s%s</loc>\n    <lastmod>%s</lastmod>\n  </sit
 for url in open("urls.txt"):
     url = url.strip()
     i += 1
+    c -= 1
     if i == 50000 or j == 50000:
         f.write('</urlset>')
         f.close()
         i = 0
-        f = add_file(j, f1, host, path)
+        if c > 0:
+            f = add_file(j, f1, host, path)
         j += 1
     f.write("  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.8</priority>\n  </url>\n"%(url, lastmod))
+    if c == 0 and i != 50000:
+        f.write('</urlset>')
+        f.close()
+        break
+# TODO测试下各种边界情况
 
 f1.write('</sitemapindex>')
 f1.close()
